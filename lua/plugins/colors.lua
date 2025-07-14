@@ -1,14 +1,20 @@
 function ColorMyPencils(color)
 	color = color or "habamax"
 	vim.cmd.colorscheme(color)
-
-  TransparentBackground()
 end
 
 function TransparentBackground()
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
+
+vim.api.nvim_create_autocmd("User", {
+	pattern = "LazyDone",
+	callback = function()
+		ColorMyPencils("tokyonight")
+		TransparentBackground()
+	end,
+})
 
 return {
 	{
@@ -21,8 +27,6 @@ return {
 					italic = false,
 				},
 			})
-
-			ColorMyPencils()
 		end,
 	},
 	{
