@@ -1,6 +1,8 @@
 function ColorMyPencils(color)
 	color = color or "habamax"
 	vim.cmd.colorscheme(color)
+
+	TransparentBackground()
 end
 
 function TransparentBackground()
@@ -11,8 +13,7 @@ end
 vim.api.nvim_create_autocmd("User", {
 	pattern = "LazyDone",
 	callback = function()
-		ColorMyPencils("tokyonight")
-		TransparentBackground()
+		ColorMyPencils("catppuccin")
 	end,
 })
 
@@ -35,4 +36,5 @@ return {
 		priority = 1000,
 		opts = {},
 	},
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 }
