@@ -2,7 +2,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 vim.g.netrw_liststyle = 0
-vim.g.netrw_banner = 0
+vim.g.netrw_banner = 1
 vim.g.netrw_altv = 1
 
 vim.opt.mouse = 'a'
