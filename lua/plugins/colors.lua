@@ -1,5 +1,5 @@
 function ColorMyPencils(color)
-	color = "rose-pine" or "habamax"
+	color = "habamax" or "habamax"
 	vim.cmd.colorscheme(color)
 
 	TransparentBackground()
